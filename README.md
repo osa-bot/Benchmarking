@@ -1,5 +1,4 @@
-# Benchmarking
-
+# Benchmarking_test
 ---
 
 [![OSA-improved](https://img.shields.io/badge/improved%20by-OSA-yellow)](https://github.com/aimclub/OSA)
@@ -10,80 +9,61 @@ Built with:
 ![pandas](https://img.shields.io/badge/pandas-150458.svg?style={0}&logo=pandas&logoColor=white)
 ![scipy](https://img.shields.io/badge/SciPy-8CAAE6.svg?style={0}&logo=SciPy&logoColor=white)
 ![tqdm](https://img.shields.io/badge/tqdm-FFC107.svg?style={0}&logo=tqdm&logoColor=black)
-
 ---
 
 ## Overview
 
-Advancing artificial general intelligence requires developing self-reflection mechanisms in multi-agent systems through generative benchmarking. This research addresses the critical challenge of evaluating AI model quality in edge cases where failures are rare but consequential. A two-stage generative benchmarking pipeline synthesizes test examples targeting model weaknesses without human intervention, combining genetic algorithms to augment poorly-predicted instances with variational autoencoders to approximate their probability distribution. The methodology formalizes benchmark generation for regression and classification tasks, enabling multi-agent systems to conduct mutual evaluation through dynamically generated benchmarks and facilitating agent self-improvement through objective performance assessment.
-
+Benchmarking_test provides a framework for automatically discovering and testing model weaknesses by generating realistic edge‑case scenarios, helping teams improve accuracy, fairness, and robustness of predictive models without manual labeling.
 ---
 
 ## Table of Contents
 
 - [Overview](#overview)
-- [Content](#content)
-- [Algorithms](#algorithms)
+- [Core features](#core-features)
 - [Installation](#installation)
+- [Contributing](#contributing)
 - [Citation](#citation)
-
 ---
 
-## Content
+## Core features
 
-This benchmarking project develops a generative framework for identifying and correcting machine learning model failures through synthetic data augmentation. The system trains regression models on real estate pricing data, then employs a two-stage pipeline combining genetic algorithms and variational autoencoders to synthesize test cases targeting model weaknesses. Key components include:
-
-- **Data Preprocessing & Feature Engineering**: Modules that prepare Moscow apartment datasets with feature encoding (MinMaxScaler, LabelEncoder, one-hot encoding)
-- **Regression Models**: Multiple implementations including KNN, Gradient Boosting, Random Forest, XGBoost, and Linear Regression for price prediction
-- **Fairness-Aware Scenario Generation**: Creates synthetic counterfactual examples in underperforming feature subspaces
-- **Supporting Utilities**: 
-  - Hyperparameter optimization via Optuna
-  - Sensitivity analysis through Sobol indices
-  - Model distillation into neural networks
-  - Train-test splitting and ensemble methods
-
-By augmenting training data with algorithmically-generated examples that expose prediction failures, the framework improves model robustness and fairness across demographic and geographic segments, enabling autonomous systems to conduct self-evaluation and continuous improvement.
-
----
-
-## Algorithms
-
-The project implements a two-stage generative benchmarking pipeline combining genetic algorithms and variational autoencoders:
-
-1. **Genetic Algorithms**: Identify and augment poorly-predicted instances by evolving feature combinations toward target performance improvements, guided by linear regression coefficients and Sobol sensitivity indices
-2. **Variational Autoencoders**: Learn the probability distribution of augmented failure cases, generating synthetic test examples that densely populate model weakness regions
-3. **Supporting Techniques**: Feature encoding, train-test splitting, and ensemble regression models (XGBoost, Random Forest, KNN)
-
-These methods collectively enable automated discovery of edge cases where machine learning models fail, creating realistic synthetic benchmarks without manual annotation for continuous model evaluation and improvement.
-
+1. **Data Preprocessing & Feature Engineering**: Automated cleaning, encoding, and scaling of raw apartment and time‑series datasets, including date extraction, one‑hot encoding, MinMax scaling, and removal of irrelevant columns to prepare data for downstream modeling.
+2. **Regression Model Training Suite**: Training and evaluation of multiple regression algorithms (KNN, Gradient Boosting, Random Forest, XGBoost, Linear Regression) on real‑estate pricing data, with automated model persistence and performance reporting (R², MAPE).
+3. **Two‑Stage Generative Benchmarking Pipeline**: Combines genetic algorithms to identify and augment poorly‑predicted instances with variational autoencoders that learn the distribution of failure cases, producing synthetic test examples that target model weaknesses.
+4. **Fairness‑Aware Scenario Generation**: Creates counterfactual synthetic examples in under‑performing feature subspaces to expose and mitigate bias across demographic and geographic segments.
+5. **Hyperparameter Optimization with Optuna**: Automated tuning of model and generation hyperparameters using Bayesian optimization, enabling efficient exploration of parameter space for improved performance.
+6. **Sobol Sensitivity Analysis**: Quantifies the influence of each input feature on model predictions, informing feature importance and guiding the genetic algorithm’s mutation and crossover strategies.
+7. **Synthetic Data Generation for Edge Cases**: Generates high‑density synthetic samples in regions of the feature space where models exhibit high error, facilitating robust testing and continuous improvement.
+8. **Multi‑Agent Self‑Evaluation Framework**: Enables autonomous agents to evaluate each other’s performance on dynamically generated benchmarks, fostering self‑reflection and iterative model refinement.
 ---
 
 ## Installation
 
-Install Benchmarking using one of the following methods:
+Install Benchmarking_test using one of the following methods:
 
 **Build from source:**
 
-1. Clone the Benchmarking repository:
-```bash
-git clone https://github.com/DRMPN/Benchmarking
-```
-
+1. Clone the Benchmarking_test repository:
+   ```sh
+   git clone https://github.com/fl1pcoin/Benchmarking_test
+   ```
 2. Navigate to the project directory:
-```bash
-cd Benchmarking
-```
-
+   ```sh
+   cd Benchmarking_test
+   ```
 3. Install the project dependencies:
-```bash
-pip install -r requirements.txt
-```
+   ```sh
+   pip install -r requirements.txt
+   ```
+---
 
+## Contributing
+
+- **[Report Issues](https://github.com/fl1pcoin/Benchmarking_test/issues)**: Submit bugs found or log feature requests for the project.
+- **[Submit Pull Requests](https://github.com/fl1pcoin/Benchmarking_test/tree/experiments/.github/CONTRIBUTING.md)**: To learn more about making a contribution to Benchmarking_test.
 ---
 
 ## Citation
-
-If you use this software, please cite it as below.
 
 ### APA format:
 
@@ -104,5 +84,3 @@ DRMPN (2025). Benchmarking repository [Computer software]. https://github.com/DR
     url = {https://github.com/DRMPN/Benchmarking.git}
 }
 ```
-
----
