@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Want us to add any features to Benchmarking?
+about: Want us to add any features to Benchmarking_test?
 title: 'enh: '
 labels: enhancement
 assignees: ''
@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 <!--
-  Hi! Thanks for considering to file a feature request with Benchmarking. Please take the time to
+  Hi! Thanks for considering to file a feature request with Benchmarking_test. Please take the time to
   answer the basic questions. Please try to be as detailed as possible.
 
   Thanks!
@@ -23,7 +23,7 @@ assignees: ''
 ## Motivation
 
 <!--
-  Why do you want to see this feature in Benchmarking? What use cases does it support?
+  Why do you want to see this feature in Benchmarking_test? What use cases does it support?
 -->
 
 ## Guide-level explanation

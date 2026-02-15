@@ -7,9 +7,9 @@ assignees: ''
 
 ---
 
-Hi! Thank you for taking the time to report a bug with Benchmarking.
+Hi! Thank you for taking the time to report a bug with Benchmarking_test.
 
-Additionally, please note that this platform is meant for bugs in Benchmarking only.
+Additionally, please note that this platform is meant for bugs in Benchmarking_test only.
 Issues regarding dependencies and libraries should be reported in their respective repositories.
 
 <!--- Provide a general summary of the issue in the Title above -->

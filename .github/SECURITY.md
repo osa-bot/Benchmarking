@@ -5,4 +5,4 @@ Our team take security bugs seriously. We appreciate your efforts to responsibly
 findings, and will make every effort to acknowledge your contributions.
 
 To report a security issue, please use the GitHub Security Advisory 
-["Report a Vulnerability"](https://github.com/DRMPN/Benchmarking/security/advisories/new) tab.
+["Report a Vulnerability"](https://github.com/fl1pcoin/Benchmarking_test/security/advisories/new) tab.

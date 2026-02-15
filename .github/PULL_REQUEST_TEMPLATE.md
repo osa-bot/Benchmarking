@@ -2,7 +2,7 @@
   Thanks for creating a Pull Request! Before you submit, please make sure
   you've done the following:
 
-  - I read the contributing document at https://github.com/DRMPN/Benchmarking/tree/experiments/.github/CONTRIBUTING.md
+  - I read the contributing document at https://github.com/fl1pcoin/Benchmarking_test/tree/experiments/.github/CONTRIBUTING.md
 -->
 
 <!--

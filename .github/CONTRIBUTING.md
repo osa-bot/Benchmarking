@@ -1,18 +1,18 @@
-# Contributing to Benchmarking
+# Contributing to Benchmarking_test
 
-We welcome you to [check the existing issues](https://github.com/DRMPN/Benchmarking/issues) for bugs or enhancements to work on.
-If you have an idea for an extension to Benchmarking, please [file a new issue](https://github.com/DRMPN/Benchmarking/issues/new) so we can discuss it.
+We welcome you to [check the existing issues](https://github.com/fl1pcoin/Benchmarking_test/issues) for bugs or enhancements to work on.
+If you have an idea for an extension to Benchmarking_test, please [file a new issue](https://github.com/fl1pcoin/Benchmarking_test/issues/new) so we can discuss it.
 
 Make sure to familiarize yourself with the project layout before making any major contributions.
 
 ## How to contribute
 
-1. Fork the [project repository](https://github.com/DRMPN/Benchmarking/): click on the 'Fork' button near the top of the page. This creates a copy of the code under your account on the GitHub server.
+1. Fork the [project repository](https://github.com/fl1pcoin/Benchmarking_test/): click on the 'Fork' button near the top of the page. This creates a copy of the code under your account on the GitHub server.
 
 2. Clone this copy to your local disk:
 
    ```bash
-   git clone git@github.com:YourUsername/Benchmarking.git
+   git clone git@github.com:YourUsername/Benchmarking_test.git
    ```
 
 3. Create a branch to hold your changes:
@@ -42,7 +42,7 @@ Make sure to familiarize yourself with the project layout before making any majo
    git push -u origin my-contribution
    ```
 
-Finally, go to the web page of your fork of the Benchmarking repo, and click
+Finally, go to the web page of your fork of the Benchmarking_test repo, and click
 'Pull Request' (PR) to send your changes to the maintainers for review.
 
 When creating your PR, please make sure to enable the "Allow edits from maintainers" option (known as maintainer_can_modify).
@@ -57,7 +57,9 @@ Before you submit a pull request for your contribution, please work
 through this checklist to make sure that you have done everything
 necessary so we can efficiently review and accept your changes.
 
-If your contribution changes Benchmarking in any way:
+If your contribution changes Benchmarking_test in any way:
+
+- Update the [README](https://github.com/fl1pcoin/Benchmarking_test/tree/experiments/.github/README.md) if anything there has changed.
 
 If your contribution involves any code changes:
 
