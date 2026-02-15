@@ -1,1 +1,1 @@
-I’m ready to write the overview, but I need the list of main components (classes, functions, and their brief descriptions) to accurately capture the project’s purpose. Could you provide that information?
+I’m ready to write the overview, but I need the list of main components (classes, functions, and their descriptions) to accurately capture the project’s purpose. Could you provide that information?

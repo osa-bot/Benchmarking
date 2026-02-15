@@ -5,31 +5,28 @@ from sklearn.preprocessing import MinMaxScaler, LabelEncoder
 
 def preprocess_data_aparts(PATH):
     """
-    Prepare apartment listings for downstream modeling.
+    Clean and structure apartment listing data for modeling.
     
-        The function ingests a raw CSV containing real‑estate records and
-        transforms it into a tidy, time‑aware feature set suitable for
-        machine‑learning experiments.  It removes columns that are not
-        useful for predictive modeling, normalises the date information
-        into separate day, month, and year fields, discards rows with
-        missing values, and orders the remaining observations chronologically.
-        The cleaned data is then written to ``train_data_aparts_pocessed.csv``.
-        This pipeline ensures that subsequent feature engineering and
-        training steps operate on a consistent, well‑structured dataset.
+        The routine reads a raw CSV of real‑estate records, removes
+        columns that are irrelevant or potentially leak target
+        information, expands the date column into discrete day,
+        month, and year fields, eliminates rows with missing values,
+        and orders the remaining observations chronologically.
+        The resulting tidy DataFrame is written to
+        ``train_data_aparts_pocessed.csv`` in the current working
+        directory.
     
-        Why these steps?
-        ----------------
-        * **Dropping columns** – identifiers, location tags, and raw price
-          fields are omitted because they either leak target information
-          or are not needed for the current modeling task.
-        * **Date decomposition** – extracting month and year allows models
-          to capture seasonal or temporal trends that may influence
-          apartment prices or demand.
-        * **Missing‑value removal** – guarantees that algorithms that
-          cannot handle NaNs receive a complete dataset.
-        * **Chronological sorting** – many downstream analyses (e.g.,
-          time‑series validation or sliding‑window training) assume
-          data is ordered by time.
+        Why these transformations?
+        --------------------------
+        * **Column removal** – identifiers, location tags, and raw price
+          columns are dropped to avoid leakage and reduce dimensionality.
+        * **Date decomposition** – extracting month and year allows
+          models to capture seasonal or temporal patterns that influence
+          apartment demand or pricing.
+        * **Missing‑value removal** – ensures downstream algorithms
+          that cannot handle NaNs receive a complete dataset.
+        * **Chronological ordering** – many validation schemes (e.g.,
+          time‑series splits) assume data is sorted by date.
     
         Parameters
         ----------
@@ -39,8 +36,7 @@ def preprocess_data_aparts(PATH):
         Returns
         -------
         None
-            The processed dataset is saved to ``train_data_aparts_pocessed.csv``
-            in the current working directory.
+            The processed dataset is saved to ``train_data_aparts_pocessed.csv``.
     """
     data = pd.read_csv(PATH)
     data = data.drop(['Этаж', 'Район', 'id', 'date', 'rooms', 'Цена', 'nprice'], axis=1)
@@ -57,23 +53,25 @@ def preprocess_data_aparts(PATH):
     
 def separate_features(data: pd.DataFrame, target_name: str, sc_feat_name: str):
     """
-    Split a DataFrame into the components required for a typical supervised‑learning
-    pipeline that also tracks a protected attribute.
+    Split a DataFrame into the components required for a supervised‑learning
+    pipeline while keeping a protected attribute separate.
     
-    The routine removes the label and the sensitive column from the feature set so
-    that models can be trained on a clean predictor matrix while still having
-    the sensitive attribute available for fairness checks or post‑processing.
-    This separation is a common first step in pipelines that enforce or evaluate
-    equitable behavior.
+    The routine removes the label and the sensitive column from the feature
+    set so that models can be trained on a clean predictor matrix.  The
+    protected attribute is retained in its own DataFrame to enable
+    fairness‑aware post‑processing or evaluation without contaminating the
+    training data.
     
     Args:
-        data: A pandas DataFrame that contains every column used in the analysis.
+        data: A pandas DataFrame that contains every column used in the
+              analysis.
         target_name: The column name that holds the target variable.
         sc_feat_name: The column name that represents the sensitive attribute.
     
     Returns:
         tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]
-            * X – the feature matrix with the target and sensitive column removed.
+            * X – the feature matrix with the target and sensitive column
+              removed.
             * S – a single‑column DataFrame holding the sensitive attribute.
             * y – a single‑column DataFrame containing the target variable.
     """
@@ -88,50 +86,35 @@ def separate_features(data: pd.DataFrame, target_name: str, sc_feat_name: str):
 
 def encode_features_VAE(X, S, y, cat_cols_name, num_cols_name, sc_feat_type):
     """
-    Prepares tabular data for a variational auto‑encoder that models both the main features
-    and a sensitive attribute.  The routine converts categorical columns to one‑hot
-    vectors, scales numeric columns and the target to the [0, 1] range, and encodes the
-    sensitive attribute according to its type.  The resulting arrays can be fed
-    directly into a VAE, while the returned scalers enable reconstruction of the
-    original values after inference.
+    Prepares tabular data for a variational auto‑encoder by transforming raw features into a format suitable for neural‑network training.
+    
+    The routine performs the following steps:
+    
+    1. **Target scaling** – the target column is fitted with a `MinMaxScaler` so that its values lie in the unit interval.  
+    2. **Feature encoding** – categorical columns are one‑hot encoded, numeric columns are min‑max scaled, and the two parts are concatenated.  
+    3. **Sensitive attribute handling** – depending on whether the attribute is categorical or numeric it is either label‑encoded or min‑max scaled.  
+    4. **Output construction** – the encoded sensitive attribute is optionally prefixed to the feature matrix, and a dictionary of the fitted scalers is returned so that the original values can be recovered after inference.
+    
+    This preprocessing guarantees that all inputs to the VAE are numeric, bounded, and of comparable scale, which stabilises training and allows the model to learn a joint representation of the main features and the sensitive attribute.
     
     Args:
-        X (pd.DataFrame):
-            DataFrame containing the predictor variables.  Columns listed in
-            ``cat_cols_name`` are treated as categorical, those in ``num_cols_name``
-            as numeric.
-        S (pd.Series or np.ndarray):
-            Sensitive attribute to be encoded.  Its type is specified by
-            ``sc_feat_type``.
-        y (pd.Series or np.ndarray):
-            Target variable that will be scaled to the [0, 1] range.
-        cat_cols_name (list[str]):
-            Names of categorical columns in ``X``.
-        num_cols_name (list[str]):
-            Names of numeric columns in ``X``.
-        sc_feat_type (str):
-            Either ``'cat'`` to encode the sensitive attribute with a
-            ``LabelEncoder`` or ``'num'`` to scale it with a ``MinMaxScaler``.
+        X (pd.DataFrame): Predictor variables. Columns listed in ``cat_cols_name`` are treated as categorical, those in ``num_cols_name`` as numeric.
+        S (pd.Series or np.ndarray): Sensitive attribute to be encoded. Its type is specified by ``sc_feat_type``.
+        y (pd.Series or np.ndarray): Target variable that will be scaled to the [0, 1] range.
+        cat_cols_name (list[str]): Names of categorical columns in ``X``.
+        num_cols_name (list[str]): Names of numeric columns in ``X``.
+        sc_feat_type (str): Either ``'cat'`` to encode the sensitive attribute with a `LabelEncoder` or ``'num'`` to scale it with a `MinMaxScaler`.
     
     Returns:
         tuple:
-            X_new (np.ndarray):
-                One‑hot encoded categorical features concatenated with min‑max
-                scaled numeric features, excluding the sensitive attribute.
-            X_w_S (np.ndarray):
-                Same as ``X_new`` but with the encoded sensitive attribute
-                prepended.
-            S_new (np.ndarray):
-                Encoded representation of the sensitive attribute.
-            y_new (np.ndarray):
-                Min‑max scaled target variable.
-            scaler_dict (dict):
-                Mapping of fitted scalers: ``'scaler_target'``, ``'scaler_num'``
-                and ``'scaler_sc'`` for later inverse transforms.
+            X_new (np.ndarray): One‑hot encoded categorical features concatenated with min‑max scaled numeric features, excluding the sensitive attribute.
+            X_w_S (np.ndarray): Same as ``X_new`` but with the encoded sensitive attribute prepended.
+            S_new (np.ndarray): Encoded representation of the sensitive attribute.
+            y_new (np.ndarray): Min‑max scaled target variable.
+            scaler_dict (dict): Mapping of fitted scalers: ``'scaler_target'``, ``'scaler_num'`` and ``'scaler_sc'`` for later inverse transforms.
     
     Raises:
-        AssertionError:
-            If ``sc_feat_type`` is not ``'cat'`` or ``'num'``.
+        AssertionError: If ``sc_feat_type`` is not ``'cat'`` or ``'num'``.
     """
     #encode target variable
     scaler_target = MinMaxScaler()
