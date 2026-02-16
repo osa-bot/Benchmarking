@@ -1,5 +1,4 @@
 # Benchmarking_test
-
 ---
 
 [![OSA-improved](https://img.shields.io/badge/improved%20by-OSA-yellow)](https://github.com/aimclub/OSA)
@@ -15,12 +14,13 @@ Built with:
 
 ## Overview
 
-Benchmarking_test helps teams quickly identify and fix hidden weaknesses in predictive models by generating realistic edge‑case tests. It highlights accuracy gaps, bias, and robustness problems, enabling faster, fairer model improvement without manual labeling.
+Benchmarking_test empowers teams to uncover and address hidden flaws in predictive models by automatically creating realistic edge‑case tests. It spotlights accuracy gaps, bias, and robustness issues, enabling faster, fairer model improvement without manual labeling.
 
 ---
 
 ## Table of Contents
 
+- [Overview](#overview)
 - [Core features](#core-features)
 - [Installation](#installation)
 - [Contributing](#contributing)
@@ -34,9 +34,7 @@ Benchmarking_test helps teams quickly identify and fix hidden weaknesses in pred
 2. **Regression Model Training Suite**: Training and evaluation of multiple regression algorithms (KNN, Gradient Boosting, Random Forest, XGBoost, Linear Regression) on real‑estate pricing data with automated persistence and performance reporting (R², MAPE).
 3. **Two‑Stage Generative Benchmarking Pipeline**: Combines genetic algorithms to identify poorly‑predicted instances with variational autoencoders that learn the distribution of failure cases, producing synthetic test examples that target model weaknesses.
 4. **Fairness‑Aware Scenario Generation**: Creates counterfactual synthetic examples in under‑performing feature subspaces to expose and mitigate bias across demographic and geographic segments.
-5. **Hyperparameter Optimization with Optuna**: Automated Bayesian tuning of model and generation hyperparameters, enabling efficient exploration of parameter space for improved performance.
-6. **Sobol Sensitivity Analysis**: Quantifies the influence of each input feature on model predictions, informing feature importance and guiding the genetic algorithm’s mutation and crossover strategies.
-7. **Synthetic Data Generation for Edge Cases**: Generates high‑density synthetic samples in regions of the feature space where models exhibit high error, facilitating robust testing and continuous improvement.
+5. **Synthetic Data Generation for Edge Cases**: Generates high‑density synthetic samples in regions of the feature space where models exhibit high error, facilitating robust testing and continuous improvement.
 
 ---
 
@@ -44,7 +42,7 @@ Benchmarking_test helps teams quickly identify and fix hidden weaknesses in pred
 
 Install Benchmarking_test using one of the following methods:
 
-**Build from source**:
+**Build from source:**
 
 1. Clone the Benchmarking_test repository:
    ```sh
