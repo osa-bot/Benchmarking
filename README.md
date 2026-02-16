@@ -1,26 +1,26 @@
 # Benchmarking_test
+
 ---
 
 [![OSA-improved](https://img.shields.io/badge/improved%20by-OSA-yellow)](https://github.com/aimclub/OSA)
 
 Built with:
 
-![numpy](https://img.shields.io/badge/NumPy-013243.svg?style=flat&logo=NumPy&logoColor=white)
-![pandas](https://img.shields.io/badge/pandas-150458.svg?style=flat&logo=pandas&logoColor=white)
-![scipy](https://img.shields.io/badge/SciPy-8CAAE6.svg?style=flat&logo=SciPy&logoColor=white)
-![tqdm](https://img.shields.io/badge/tqdm-FFC107.svg?style=flat&logo=tqdm&logoColor=black)
+![numpy](https://img.shields.io/badge/NumPy-013243.svg?style={0}&logo=NumPy&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458.svg?style={0}&logo=pandas&logoColor=white)
+![scipy](https://img.shields.io/badge/SciPy-8CAAE6.svg?style={0}&logo=SciPy&logoColor=white)
+![tqdm](https://img.shields.io/badge/tqdm-FFC107.svg?style={0}&logo=tqdm&logoColor=black)
 
 ---
 
 ## Overview
 
-Benchmarking_test is a tool that automatically finds and tests the weak spots of predictive models by creating realistic edge‑case scenarios. It lets teams quickly spot accuracy gaps, bias, and robustness issues, and refine models without manual labeling, boosting overall performance and fairness.
+Benchmarking_test helps teams quickly identify and fix hidden weaknesses in predictive models by generating realistic edge‑case tests. It highlights accuracy gaps, bias, and robustness problems, enabling faster, fairer model improvement without manual labeling.
 
 ---
 
 ## Table of Contents
 
-- [Overview](#overview)
 - [Core features](#core-features)
 - [Installation](#installation)
 - [Contributing](#contributing)
@@ -37,7 +37,6 @@ Benchmarking_test is a tool that automatically finds and tests the weak spots of
 5. **Hyperparameter Optimization with Optuna**: Automated Bayesian tuning of model and generation hyperparameters, enabling efficient exploration of parameter space for improved performance.
 6. **Sobol Sensitivity Analysis**: Quantifies the influence of each input feature on model predictions, informing feature importance and guiding the genetic algorithm’s mutation and crossover strategies.
 7. **Synthetic Data Generation for Edge Cases**: Generates high‑density synthetic samples in regions of the feature space where models exhibit high error, facilitating robust testing and continuous improvement.
-8. **Multi‑Agent Self‑Evaluation Framework**: Enables autonomous agents to evaluate each other’s performance on dynamically generated benchmarks, fostering self‑reflection and iterative model refinement.
 
 ---
 
