@@ -12,63 +12,63 @@ Built with:
 
 ---
 
-## Overview
+## Обзор
 
-Benchmarking_test empowers teams to uncover and address hidden flaws in predictive models by automatically creating realistic edge‑case tests. It spotlights accuracy gaps, bias, and robustness issues, enabling faster, fairer model improvement without manual labeling.
-
----
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Core features](#core-features)
-- [Installation](#installation)
-- [Contributing](#contributing)
-- [Citation](#citation)
+Benchmarking_test позволяет командам выявлять и устранять скрытые недостатки предиктивных моделей, автоматически создавая реалистичные тесты на крайних случаях. Он выявляет разрывы в точности, смещение и проблемы устойчивости, позволяя быстрее и справедливее улучшать модели без ручной разметки.
 
 ---
 
-## Core features
+## Содержание
 
-1. **Data Preprocessing & Feature Engineering**: Automated cleaning, encoding, scaling, and date decomposition of raw apartment and time‑series datasets, removing irrelevant columns and ordering observations chronologically to prepare data for downstream modeling.
-2. **Regression Model Training Suite**: Training and evaluation of multiple regression algorithms (KNN, Gradient Boosting, Random Forest, XGBoost, Linear Regression) on real‑estate pricing data with automated persistence and performance reporting (R², MAPE).
-3. **Two‑Stage Generative Benchmarking Pipeline**: Combines genetic algorithms to identify poorly‑predicted instances with variational autoencoders that learn the distribution of failure cases, producing synthetic test examples that target model weaknesses.
-4. **Fairness‑Aware Scenario Generation**: Creates counterfactual synthetic examples in under‑performing feature subspaces to expose and mitigate bias across demographic and geographic segments.
-5. **Synthetic Data Generation for Edge Cases**: Generates high‑density synthetic samples in regions of the feature space where models exhibit high error, facilitating robust testing and continuous improvement.
+- [Обзор](#обзор)
+- [Основные функции](#основные-функции)
+- [Установка](#установка)
+- [Внесение вклада](#внесение-вклада)
+- [Цитирование](#цитирование)
 
 ---
 
-## Installation
+## Основные функции
 
-Install Benchmarking_test using one of the following methods:
+1. **Обработка данных и инженерия признаков**: автоматическая очистка, кодирование, масштабирование и разложение дат в исходных наборах данных о квартирах и временных рядах, удаление нерелевантных столбцов и упорядочивание наблюдений по хронологии для подготовки данных к последующему моделированию.
+2. **Набор для обучения регрессионных моделей**: обучение и оценка нескольких регрессионных алгоритмов (KNN, Gradient Boosting, Random Forest, XGBoost, Linear Regression) на данных цен недвижимости с автоматической сохранностью и отчётностью по производительности (R², MAPE).
+3. **Двухступенчатый генеративный пайплайн для бенчмаркинга**: сочетает генетические алгоритмы для выявления плохо предсказанных случаев с вариационными автоэнкодерами, которые изучают распределение ошибок, создавая синтетические тестовые примеры, направленные на слабые места модели.
+4. **Генерация сценариев с учётом справедливости**: создаёт контрфактические синтетические примеры в подпространствах с низкой производительностью, чтобы выявить и смягчить смещение по демографическим и географическим сегментам.
+5. **Генерация синтетических данных для крайних случаев**: создаёт высоко плотные синтетические образцы в областях пространства признаков, где модели показывают высокую ошибку, облегчая надёжное тестирование и непрерывное улучшение.
 
-**Build from source:**
+---
 
-1. Clone the Benchmarking_test repository:
+## Установка
+
+Установите Benchmarking_test, используя один из следующих методов:
+
+**Сборка из исходного кода:**
+
+1. Клонируйте репозиторий Benchmarking_test:
    ```sh
    git clone https://github.com/fl1pcoin/Benchmarking_test
    ```
-2. Navigate to the project directory:
+2. Перейдите в каталог проекта:
    ```sh
    cd Benchmarking_test
    ```
-3. Install the project dependencies:
+3. Установите зависимости проекта:
    ```sh
    pip install -r requirements.txt
    ```
 
 ---
 
-## Contributing
+## Внесение вклада
 
-- **[Report Issues](https://github.com/fl1pcoin/Benchmarking_test/issues)**: Submit bugs found or log feature requests for the project.
-- **[Submit Pull Requests](https://github.com/fl1pcoin/Benchmarking_test/tree/experiments/.github/CONTRIBUTING.md)**: To learn more about making a contribution to Benchmarking_test.
+- **[Сообщить об ошибках](https://github.com/fl1pcoin/Benchmarking_test/issues)**: Отправьте найденные ошибки или запросы на новые функции для проекта.
+- **[Отправить Pull Request](https://github.com/fl1pcoin/Benchmarking_test/tree/experiments/.github/CONTRIBUTING.md)**: Узнайте больше о том, как внести вклад в Benchmarking_test.
 
 ---
 
-## Citation
+## Цитирование
 
-DRMPN (2025). Benchmarking repository [Computer software]. https://github.com/DRMPN/Benchmarking
+DRMPN (2025). Репозиторий Benchmarking [Computer software]. https://github.com/DRMPN/Benchmarking
 
 ```bibtex
 @misc{Benchmarking,
