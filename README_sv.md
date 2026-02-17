@@ -23,18 +23,18 @@ Benchmarking_test ger team möjlighet att upptäcka och åtgärda dolda fel i f�
 - [Översikt](#overview)
 - [Kärnfunktioner](#core-features)
 - [Installation](#installation)
-- [Bidrag](#contributing)
+- [Bidra](#contributing)
 - [Citat](#citation)
 
 ---
 
 ## Kärnfunktioner
 
-1. **Dataförbehandling & Funktionsutveckling**: Automatisk rengöring, kodning, skalning och datumdekomposition av råa bostads- och tidsseriedata, borttagning av irrelevanta kolumner och sortering av observationer kronologiskt för att förbereda data för efterföljande modellering.
-2. **Regressionmodellträning**: Träning och utvärdering av flera regressionsalgoritmer (KNN, Gradient Boosting, Random Forest, XGBoost, Linear Regression) på fastighetsprisdatan med automatiserad lagring och prestandarapportering (R², MAPE).
-3. **Tvåstegs generativ benchmarkpipeline**: Kombinerar genetiska algoritmer för att identifiera dåligt förutsagda fall med variational autoencoders som lär sig fördelningen av misslyckade fall, vilket producerar syntetiska testexempel som riktar sig mot modellens svagheter.
-4. **Rättvisebewakande scenariegenerering**: Skapar kontrafaktiska syntetiska exempel i underpresterande funktionsdelområden för att exponera och mildra bias över demografiska och geografiska segment.
-5. **Syntetisk datagenerering för edge‑cases**: Genererar högdensitetssyntetiska prover i områden av funktionsutrymmet där modeller visar hög fel, vilket underlättar robust testning och kontinuerlig förbättring.
+1. **Data Preprocessing & Feature Engineering**: Automatiserad rengöring, kodning, skalning och datumdekomposition av råa bostads- och tidsseriedata, borttagning av irrelevanta kolumner och sortering av observationer kronologiskt för att förbereda data för efterföljande modellering.
+2. **Regression Model Training Suite**: Träning och utvärdering av flera regressionsalgoritmer (KNN, Gradient Boosting, Random Forest, XGBoost, Linear Regression) på fastighetsprissättningsdata med automatiserad lagring och prestandarapportering (R², MAPE).
+3. **Two‑Stage Generative Benchmarking Pipeline**: Kombinerar genetiska algoritmer för att identifiera dåligt förutsagda fall med variational autoencoders som lär sig fördelningen av misslyckade fall, vilket producerar syntetiska testexempel som riktar sig mot modellens svagheter.
+4. **Fairness‑Aware Scenario Generation**: Skapar kontrafaktiska syntetiska exempel i underpresterande funktionssubrum för att exponera och mildra bias över demografiska och geografiska segment.
+5. **Synthetic Data Generation for Edge Cases**: Genererar högdensitet syntetiska prover i områden av funktionsutrymmet där modeller visar hög fel, vilket underlättar robust testning och kontinuerlig förbättring.
 
 ---
 
@@ -42,33 +42,33 @@ Benchmarking_test ger team möjlighet att upptäcka och åtgärda dolda fel i f�
 
 Installera Benchmarking_test med någon av följande metoder:
 
-**Bygg från källkod:**
+**Build from source:**
 
-1. Klona Benchmarking_test-repositoriet:
+1. Clone the Benchmarking_test repository:
    ```sh
    git clone https://github.com/fl1pcoin/Benchmarking_test
    ```
-2. Navigera till projektkatalogen:
+2. Navigate to the project directory:
    ```sh
    cd Benchmarking_test
    ```
-3. Installera projektets beroenden:
+3. Install the project dependencies:
    ```sh
    pip install -r requirements.txt
    ```
 
 ---
 
-## Bidrag
+## Bidra
 
-- **[Rapportera problem](https://github.com/fl1pcoin/Benchmarking_test/issues)**: Skicka in bug eller logga funktionsförfrågningar för projektet.
-- **[Skicka Pull Requests](https://github.com/fl1pcoin/Benchmarking_test/tree/experiments/.github/CONTRIBUTING.md)**: För att lära dig mer om hur du gör ett bidrag till Benchmarking_test.
+- **[Report Issues](https://github.com/fl1pcoin/Benchmarking_test/issues)**: Submit bugs found or log feature requests for the project.
+- **[Submit Pull Requests](https://github.com/fl1pcoin/Benchmarking_test/tree/experiments/.github/CONTRIBUTING.md)**: To learn more about making a contribution to Benchmarking_test.
 
 ---
 
 ## Citat
 
-DRMPN (2025). Benchmarking-repository [Computer software]. https://github.com/DRMPN/Benchmarking
+DRMPN (2025). Benchmarking repository [Computer software]. https://github.com/DRMPN/Benchmarking
 
 ```bibtex
 @misc{Benchmarking,

@@ -12,63 +12,63 @@ Built with:
 
 ---
 
-## Översikt
+## Overview
 
-Benchmarking_test ger team möjlighet att upptäcka och åtgärda dolda fel i förutsägande modeller genom att automatiskt skapa realistiska edge‑case tester. Det belyser noggrannhetsluckor, bias och robusthetsproblem, vilket möjliggör snabbare, rättvisare modellförbättring utan manuell märkning.
+Benchmarking_test позволяет командам выявлять и устранять скрытые недостатки предиктивных моделей, автоматически создавая реалистичные тесты на крайних случаях. Он выявляет разрывы в точности, предвзятость и проблемы устойчивости, обеспечивая более быструю и справедливую улучшение модели без ручной разметки.
 
 ---
 
-## Innehållsförteckning
+## Table of Contents
 
-- [Översikt](#overview)
-- [Kärnfunktioner](#core-features)
+- [Overview](#overview)
+- [Core features](#core-features)
 - [Installation](#installation)
-- [Bidrag](#contributing)
-- [Citat](#citation)
+- [Contributing](#contributing)
+- [Citation](#citation)
 
 ---
 
-## Kärnfunktioner
+## Core features
 
-1. **Dataförbehandling & Funktionsutveckling**: Automatisk rengöring, kodning, skalning och datumdekomposition av råa bostads- och tidsseriedata, borttagning av irrelevanta kolumner och sortering av observationer kronologiskt för att förbereda data för efterföljande modellering.
-2. **Regressionmodellträning**: Träning och utvärdering av flera regressionsalgoritmer (KNN, Gradient Boosting, Random Forest, XGBoost, Linear Regression) på fastighetsprisdatan med automatiserad lagring och prestandarapportering (R², MAPE).
-3. **Tvåstegs generativ benchmarkpipeline**: Kombinerar genetiska algoritmer för att identifiera dåligt förutsagda fall med variational autoencoders som lär sig fördelningen av misslyckade fall, vilket producerar syntetiska testexempel som riktar sig mot modellens svagheter.
-4. **Rättvisebewakande scenariegenerering**: Skapar kontrafaktiska syntetiska exempel i underpresterande funktionsdelområden för att exponera och mildra bias över demografiska och geografiska segment.
-5. **Syntetisk datagenerering för edge‑cases**: Genererar högdensitetssyntetiska prover i områden av funktionsutrymmet där modeller visar hög fel, vilket underlättar robust testning och kontinuerlig förbättring.
+1. **Предобработка данных и инженерия признаков**: Автоматизированная очистка, кодирование, масштабирование и разложение дат в исходных наборах данных о квартирах и временных рядах, удаление нерелевантных столбцов и упорядочивание наблюдений по хронологии для подготовки данных к последующему моделированию.
+2. **Набор обучения регрессионных моделей**: Обучение и оценка нескольких регрессионных алгоритмов (KNN, Gradient Boosting, Random Forest, XGBoost, Linear Regression) на данных цен недвижимости с автоматической сохранностью и отчетностью по производительности (R², MAPE).
+3. **Двухступенчатый генеративный пайплайн для бенчмаркинга**: Сочетает генетические алгоритмы для выявления плохо предсказанных случаев с вариационными автоэнкодерами, которые изучают распределение неудачных случаев, создавая синтетические тестовые примеры, направленные на слабые места модели.
+4. **Генерация сценариев с учётом справедливости**: Создаёт контрфактические синтетические примеры в подпространствах с низкой производительностью, чтобы выявить и смягчить предвзятость по демографическим и географическим сегментам.
+5. **Генерация синтетических данных для крайних случаев**: Создаёт высоко плотные синтетические образцы в областях пространства признаков, где модели демонстрируют высокую ошибку, облегчая надёжное тестирование и непрерывное улучшение.
 
 ---
 
 ## Installation
 
-Installera Benchmarking_test med någon av följande metoder:
+Установите Benchmarking_test, используя один из следующих методов:
 
-**Bygg från källkod:**
+**Сборка из исходного кода:**
 
-1. Klona Benchmarking_test-repositoriet:
+1. Клонируйте репозиторий Benchmarking_test:
    ```sh
    git clone https://github.com/fl1pcoin/Benchmarking_test
    ```
-2. Navigera till projektkatalogen:
+2. Перейдите в каталог проекта:
    ```sh
    cd Benchmarking_test
    ```
-3. Installera projektets beroenden:
+3. Установите зависимости проекта:
    ```sh
    pip install -r requirements.txt
    ```
 
 ---
 
-## Bidrag
+## Contributing
 
-- **[Rapportera problem](https://github.com/fl1pcoin/Benchmarking_test/issues)**: Skicka in bug eller logga funktionsförfrågningar för projektet.
-- **[Skicka Pull Requests](https://github.com/fl1pcoin/Benchmarking_test/tree/experiments/.github/CONTRIBUTING.md)**: För att lära dig mer om hur du gör ett bidrag till Benchmarking_test.
+- **[Сообщить об ошибках](https://github.com/fl1pcoin/Benchmarking_test/issues)**: Отправьте найденные ошибки или запросы на новые функции для проекта.
+- **[Отправить Pull Request](https://github.com/fl1pcoin/Benchmarking_test/tree/experiments/.github/CONTRIBUTING.md)**: Узнайте больше о том, как внести вклад в Benchmarking_test.
 
 ---
 
-## Citat
+## Citation
 
-DRMPN (2025). Benchmarking-repository [Computer software]. https://github.com/DRMPN/Benchmarking
+DRMPN (2025). Репозиторий Benchmarking [Компьютерное программное обеспечение]. https://github.com/DRMPN/Benchmarking
 
 ```bibtex
 @misc{Benchmarking,
