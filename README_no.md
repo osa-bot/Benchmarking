@@ -14,27 +14,27 @@ Built with:
 
 ## Oversikt
 
-Benchmarking_test gir team mulighet til å avdekke og rette skjulte feil i prediktive modeller ved å automatisk lage realistiske kanttilfelle tester. Det fremhever nøyaktighetsgap, skjevhet og robusthetsproblemer, og muliggjør raskere, rettferdigere modellforbedring uten manuell merking.
+Benchmarking_test gir team mulighet til å avdekke og rette skjulte feil i prediktive modeller ved å automatisk lage realistiske kanttilfelle tester. Det fremhever nøyaktighetsgap, skjevheter og robusthetsproblemer, og muliggjør raskere, rettferdigere modellforbedring uten manuell merking.
 
 ---
 
 ## Innholdsfortegnelse
 
-- [Oversikt](#overview)
-- [Kjernefunksjoner](#core-features)
-- [Installasjon](#installation)
-- [Bidrag](#contributing)
-- [Sitat](#citation)
+- [Oversikt](#oversikt)
+- [Kjernefunksjoner](#kjernefunksjoner)
+- [Installasjon](#installasjon)
+- [Bidrag](#bidrag)
+- [Sitat](#sitat)
 
 ---
 
 ## Kjernefunksjoner
 
-1. **Datapreprosessering og funksjonsutvikling**: Automatisk rengjøring, koding, skalering og datadekomponering av rå leilighets- og tidsseriedata, fjerning av irrelevante kolonner og kronologisk sortering av observasjoner for å forberede data for videre modellering.
-2. **Regresjonsmodelltreningspakke**: Trening og evaluering av flere regresjonsalgoritmer (KNN, Gradient Boosting, Random Forest, XGBoost, Lineær regresjon) på eiendomsprisdata med automatisk lagring og ytelsesrapportering (R², MAPE).
-3. **To‑stegs generativ benchmarkingpipeline**: Kombinerer genetiske algoritmer for å identifisere dårlig forutsagte tilfeller med variational autoencoders som lærer fordelingen av feilsaker, og produserer syntetiske testeksempler som retter seg mot modellens svakheter.
-4. **Rettferdighetsbevisst scenario-generering**: Lager kontrafaktiske syntetiske eksempler i underpresterende funksjonsunderrom for å avdekke og redusere skjevhet på tvers av demografiske og geografiske segmenter.
-5. **Syntetisk datagenerering for kanttilfeller**: Genererer høydensitet syntetiske prøver i områder av funksjonsrommet der modellene viser høy feil, og muliggjør robust testing og kontinuerlig forbedring.
+1. **Datapreprosessering og funksjonsutvikling**: Automatisk rengjøring, koding, skalering og dato‑dekomponering av rå bolig- og tidsseriedata, fjerning av irrelevante kolonner og kronologisk sortering av observasjoner for å forberede data for videre modellering.
+2. **Treningssett for regresjonsmodeller**: Trening og evaluering av flere regresjonsalgoritmer (KNN, Gradient Boosting, Random Forest, XGBoost, Lineær regresjon) på eiendomsprisdata med automatisk lagring og ytelsesrapportering (R², MAPE).
+3. **To‑stegs generativ benchmarking pipeline**: Kombinerer genetiske algoritmer for å identifisere dårlig forutsagte tilfeller med variational autoencoders som lærer fordelingen av feilede tilfeller, og produserer syntetiske testeksempler som retter seg mot modellens svakheter.
+4. **Scenario-generering med bevissthet om rettferdighet**: Oppretter kontrafaktiske syntetiske eksempler i underpresterende funksjonsunderrom for å avdekke og redusere skjevheter på tvers av demografiske og geografiske segmenter.
+5. **Syntetisk datagenerering for kanttilfeller**: Genererer høydensitet syntetiske prøver i områder av funksjonsrommet der modellene viser høy feil, noe som muliggjør robust testing og kontinuerlig forbedring.
 
 ---
 
@@ -42,13 +42,13 @@ Benchmarking_test gir team mulighet til å avdekke og rette skjulte feil i predi
 
 Installer Benchmarking_test ved å bruke en av følgende metoder:
 
-**Bygg fra kilde**:
+**Bygg fra kilde:**
 
-1. Klon Benchmarking_test‑repoet:
+1. Klon Benchmarking_test-repositoriet:
    ```sh
    git clone https://github.com/fl1pcoin/Benchmarking_test
    ```
-2. Naviger til prosjektmappen:
+2. Naviger til prosjektkatalogen:
    ```sh
    cd Benchmarking_test
    ```
@@ -61,14 +61,14 @@ Installer Benchmarking_test ved å bruke en av følgende metoder:
 
 ## Bidrag
 
-- **[Rapporter problemer](https://github.com/fl1pcoin/Benchmarking_test/issues)**: Send inn feil funnet eller logg funksjonsforespørsler for prosjektet.
-- **[Send inn Pull Requests](https://github.com/fl1pcoin/Benchmarking_test/tree/experiments/.github/CONTRIBUTING.md)**: For å lære mer om hvordan du kan bidra til Benchmarking_test.
+- **[Rapporter problemer](https://github.com/fl1pcoin/Benchmarking_test/issues)**: Send inn funnede feil eller logg funksjonsforespørsler for prosjektet.
+- **[Send inn Pull Requests](https://github.com/fl1pcoin/Benchmarking_test/tree/experiments/.github/CONTRIBUTING.md)**: For å lære mer om å bidra til Benchmarking_test.
 
 ---
 
 ## Sitat
 
-DRMPN (2025). Benchmarking repository [Computer software]. https://github.com/DRMPN/Benchmarking
+DRMPN (2025). Benchmarking-repositoriet [Datamaskinprogramvare]. https://github.com/DRMPN/Benchmarking
 
 ```bibtex
 @misc{Benchmarking,
