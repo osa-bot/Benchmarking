@@ -12,63 +12,63 @@ Built with:
 
 ---
 
-## Prezentare generală
+## Обзор
 
-Benchmarking_test permite echipelor să descopere și să remedieze defecte ascunse în modelele predictive prin crearea automată de teste realiste pentru cazuri extreme. Evidențiază diferențele de acuratețe, părtinirea și problemele de robustețe, permițând îmbunătățirea modelelor mai rapidă și mai echitabilă fără etichetare manuală.
-
----
-
-## Indice
-
-- [Prezentare generală](#prezentare-generală)
-- [Caracteristici principale](#caracteristici-principale)
-- [Instalare](#instalare)
-- [Contribuții](#contribuții)
-- [Citare](#citare)
+Benchmarking_test позволяет командам выявлять и устранять скрытые недостатки предиктивных моделей, автоматически создавая реалистичные тесты на крайних случаях. Он выявляет разрывы в точности, предвзятость и проблемы устойчивости, позволяя быстрее и справедливее улучшать модели без ручной разметки.
 
 ---
 
-## Caracteristici principale
+## Содержание
 
-1. **Preprocesare a datelor și inginerie de caracteristici**: Curățare, codificare, scalare și decompoziție a datelor de timp și a seturilor de date despre apartamente, eliminând coloane irelevante și ordonând observațiile cronologic pentru a pregăti datele pentru modelarea ulterioară.
-2. **Suite de antrenament a modelelor de regresie**: Antrenarea și evaluarea mai multor algoritmi de regresie (KNN, Gradient Boosting, Random Forest, XGBoost, Regresie liniară) pe date de prețuri imobiliare, cu raportare automată a performanței (R², MAPE).
-3. **Pipeline de benchmarking generativ în două etape**: Combină algoritmi genetici pentru identificarea instanțelor slab prezise cu autoencodere variationale care învață distribuția cazurilor de eșec, producând exemple de test sintetic care vizează slăbiciunile modelului.
-4. **Generare de scenarii conștiente de echitate**: Creează exemple sintetice contrafactuale în subspații de caracteristici subperformante pentru a expune și a atenua părtinirea în segmentul demografic și geografic.
-5. **Generare de date sintetice pentru cazuri extreme**: Produce mostre sintetice de înaltă densitate în regiunile spațiului de caracteristici unde modelele prezintă erori mari, facilitând testarea robustă și îmbunătățirea continuă.
+- [Обзор](#обзор)
+- [Основные функции](#основные-функции)
+- [Установка](#установка)
+- [Внесение вклада](#внесение-вклада)
+- [Цитирование](#цитирование)
 
 ---
 
-## Instalare
+## Основные функции
 
-Instalați Benchmarking_test utilizând una dintre următoarele metode:
+1. **Обработка данных и создание признаков**: Автоматическая очистка, кодирование, масштабирование и разложение дат из исходных наборов данных о квартирах и временных рядах, удаление нерелевантных столбцов и упорядочивание наблюдений по хронологии для подготовки данных к последующему моделированию.
+2. **Набор для обучения регрессионных моделей**: Обучение и оценка нескольких регрессионных алгоритмов (KNN, Gradient Boosting, Random Forest, XGBoost, Linear Regression) на данных цен недвижимости с автоматической сохранностью и отчётностью по производительности (R², MAPE).
+3. **Двухступенчатый генеративный пайплайн для бенчмаркинга**: Сочетает генетические алгоритмы для выявления плохо предсказанных случаев с вариационными автоэнкодерами, которые изучают распределение ошибок, создавая синтетические тестовые примеры, направленные на слабые места модели.
+4. **Генерация сценариев с учётом справедливости**: Создаёт контрфактические синтетические примеры в подпространствах с низкой производительностью, чтобы выявить и смягчить предвзятость по демографическим и географическим сегментам.
+5. **Генерация синтетических данных для крайних случаев**: Создаёт высоко плотные синтетические образцы в областях пространства признаков, где модели показывают высокую ошибку, облегчая надёжное тестирование и непрерывное улучшение.
 
-**Construiește din sursă:**
+---
 
-1. Clonați depozitul Benchmarking_test:
+## Установка
+
+Установите Benchmarking_test, используя один из следующих методов:
+
+**Сборка из исходного кода:**
+
+1. Клонируйте репозиторий Benchmarking_test:
    ```sh
    git clone https://github.com/fl1pcoin/Benchmarking_test
    ```
-2. Navigați la directorul proiectului:
+2. Перейдите в каталог проекта:
    ```sh
    cd Benchmarking_test
    ```
-3. Instalați dependențele proiectului:
+3. Установите зависимости проекта:
    ```sh
    pip install -r requirements.txt
    ```
 
 ---
 
-## Contribuții
+## Внесение вклада
 
-- **[Raportați probleme](https://github.com/fl1pcoin/Benchmarking_test/issues)**: Trimiteți erori găsite sau solicitați caracteristici pentru proiect.
-- **[Trimiteți Pull Requests](https://github.com/fl1pcoin/Benchmarking_test/tree/experiments/.github/CONTRIBUTING.md)**: Pentru a afla mai multe despre cum să contribuiți la Benchmarking_test.
+- **[Сообщить об ошибках](https://github.com/fl1pcoin/Benchmarking_test/issues)**: Отправьте найденные ошибки или запросы на новые функции для проекта.
+- **[Отправить Pull Request](https://github.com/fl1pcoin/Benchmarking_test/tree/experiments/.github/CONTRIBUTING.md)**: Чтобы узнать больше о том, как внести вклад в Benchmarking_test.
 
 ---
 
-## Citare
+## Цитирование
 
-DRMPN (2025). Depozit Benchmarking [Software de calculator]. https://github.com/DRMPN/Benchmarking
+DRMPN (2025). Репозиторий Benchmarking [Computer software]. https://github.com/DRMPN/Benchmarking
 
 ```bibtex
 @misc{Benchmarking,
