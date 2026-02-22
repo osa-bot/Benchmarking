@@ -14,7 +14,7 @@ Built with:
 
 ## Überblick
 
-Benchmarking_test ermöglicht es Teams, versteckte Fehler in Vorhersagemodellen aufzudecken und zu beheben, indem automatisch realistische Grenzfalltests erstellt werden. Es hebt Genauigkeitslücken, Verzerrungen und Robustheitsprobleme hervor und ermöglicht eine schnellere, gerechtere Modellverbesserung ohne manuelle Kennzeichnung.
+Benchmarking_test ermöglicht es Teams, versteckte Fehler in Vorhersagemodellen aufzudecken und zu beheben, indem automatisch realistische Grenzfalltests erstellt werden. Es hebt Genauigkeitslücken, Bias und Robustheitsprobleme hervor und ermöglicht eine schnellere, gerechtere Modellverbesserung ohne manuelles Labeling.
 
 ---
 
@@ -30,11 +30,11 @@ Benchmarking_test ermöglicht es Teams, versteckte Fehler in Vorhersagemodellen 
 
 ## Kernfunktionen
 
-1. **Datenvorverarbeitung & Feature Engineering**: Automatisierte Bereinigung, Kodierung, Skalierung und Datumszerlegung von Rohdaten zu Wohnungen und Zeitreihen, Entfernung irrelevanter Spalten und chronologische Ordnung der Beobachtungen zur Vorbereitung der Daten für nachgelagerte Modellierung.
-2. **Regression Model Training Suite**: Training und Bewertung mehrerer Regressionsalgorithmen (KNN, Gradient Boosting, Random Forest, XGBoost, Linear Regression) auf Immobilienpreisdaten mit automatischer Persistenz und Leistungsberichterstattung (R², MAPE).
-3. **Zwei‑Stufen Generative Benchmarking Pipeline**: Kombiniert genetische Algorithmen zur Identifizierung schlecht vorhergesagter Instanzen mit variationalen Autoencodern, die die Verteilung von Fehlermustern lernen, und erzeugt synthetische Testbeispiele, die Modellschwächen gezielt ansprechen.
-4. **Fairness‑Bewusste Szenarioerzeugung**: Erzeugt kontrafaktische synthetische Beispiele in unterdurchschnittlichen Feature‑Subspaces, um Verzerrungen über demografische und geografische Segmente hinweg aufzudecken und zu mildern.
-5. **Synthetische Datengenerierung für Grenzfälle**: Erzeugt hochdichte synthetische Stichproben in Bereichen des Feature‑Raums, in denen Modelle hohe Fehler aufweisen, um robuste Tests und kontinuierliche Verbesserung zu ermöglichen.
+1. **Datenvorverarbeitung & Feature Engineering**: Automatisierte Bereinigung, Kodierung, Skalierung und Datumszerlegung von Rohdaten zu Wohnungen und Zeitreihen, Entfernen irrelevanter Spalten und chronologische Ordnung der Beobachtungen zur Vorbereitung der Daten für nachgelagerte Modellierung.
+2. **Regression Model Training Suite**: Training und Bewertung mehrerer Regressionsalgorithmen (KNN, Gradient Boosting, Random Forest, XGBoost, Linear Regression) auf Immobilienpreis-Daten mit automatischer Persistenz und Leistungsberichterstattung (R², MAPE).
+3. **Zwei‑Stufen Generative Benchmarking Pipeline**: Kombiniert genetische Algorithmen zur Identifizierung schlecht vorhergesagter Instanzen mit variationalen Autoencodern, die die Verteilung von Fehlermustern lernen, und erzeugt synthetische Testbeispiele, die gezielt Schwachstellen des Modells ansprechen.
+4. **Fairness‑Aware Scenario Generation**: Erstellt kontrafaktische synthetische Beispiele in unterdurchschnittlichen Feature‑Subspaces, um Bias über demografische und geografische Segmente hinweg aufzudecken und zu mildern.
+5. **Synthetische Datengenerierung für Grenzfälle**: Erzeugt hochdichte synthetische Stichproben in Bereichen des Feature‑Raums, in denen Modelle hohe Fehler aufweisen, um robuste Tests und kontinuierliche Verbesserungen zu ermöglichen.
 
 ---
 
@@ -42,9 +42,9 @@ Benchmarking_test ermöglicht es Teams, versteckte Fehler in Vorhersagemodellen 
 
 Installieren Sie Benchmarking_test mit einer der folgenden Methoden:
 
-**Aus dem Quellcode bauen:**
+**Aus dem Quellcode bauen**:
 
-1. Clone das Benchmarking_test Repository:
+1. Klonen Sie das Benchmarking_test Repository:
    ```sh
    git clone https://github.com/fl1pcoin/Benchmarking_test
    ```
@@ -61,8 +61,8 @@ Installieren Sie Benchmarking_test mit einer der folgenden Methoden:
 
 ## Mitwirken
 
-- **[Report Issues](https://github.com/fl1pcoin/Benchmarking_test/issues)**: Melden Sie gefundene Fehler oder loggen Sie Funktionsanfragen für das Projekt.
-- **[Submit Pull Requests](https://github.com/fl1pcoin/Benchmarking_test/tree/experiments/.github/CONTRIBUTING.md)**: Um mehr darüber zu erfahren, wie Sie zu Benchmarking_test beitragen können.
+- **[Probleme melden](https://github.com/fl1pcoin/Benchmarking_test/issues)**: Melden Sie gefundene Fehler oder loggen Sie Funktionsanfragen für das Projekt.
+- **[Pull Requests einreichen](https://github.com/fl1pcoin/Benchmarking_test/tree/experiments/.github/CONTRIBUTING.md)**: Um mehr darüber zu erfahren, wie Sie zu Benchmarking_test beitragen können.
 
 ---
 
