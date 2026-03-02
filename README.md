@@ -5,17 +5,15 @@
 
 Built with:
 
-![numpy](https://img.shields.io/badge/NumPy-013243.svg?style={0}&logo=NumPy&logoColor=white)
-![pandas](https://img.shields.io/badge/pandas-150458.svg?style={0}&logo=pandas&logoColor=white)
-![scipy](https://img.shields.io/badge/SciPy-8CAAE6.svg?style={0}&logo=SciPy&logoColor=white)
-![tqdm](https://img.shields.io/badge/tqdm-FFC107.svg?style={0}&logo=tqdm&logoColor=black)
-
+![numpy](https://img.shields.io/badge/NumPy-013243.svg?style=flat&logo=NumPy&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458.svg?style=flat&logo=pandas&logoColor=white)
+![scipy](https://img.shields.io/badge/SciPy-8CAAE6.svg?style=flat&logo=SciPy&logoColor=white)
+![tqdm](https://img.shields.io/badge/tqdm-FFC107.svg?style=flat&logo=tqdm&logoColor=black)
 ---
 
 ## Overview
 
-Benchmarking_test empowers teams to uncover and address hidden flaws in predictive models by automatically creating realistic edge‑case tests. It spotlights accuracy gaps, bias, and robustness issues, enabling faster, fairer model improvement without manual labeling.
-
+Benchmarking_test helps teams identify and fix hidden weaknesses in predictive models by automatically generating realistic edge‑case tests. It highlights accuracy gaps, bias, and robustness problems, enabling faster, fairer model improvement without manual labeling.
 ---
 
 ## Table of Contents
@@ -25,24 +23,22 @@ Benchmarking_test empowers teams to uncover and address hidden flaws in predicti
 - [Installation](#installation)
 - [Contributing](#contributing)
 - [Citation](#citation)
-
 ---
 
 ## Core features
 
-1. **Data Preprocessing & Feature Engineering**: Automated cleaning, encoding, scaling, and date decomposition of raw apartment and time‑series datasets, removing irrelevant columns and ordering observations chronologically to prepare data for downstream modeling.
-2. **Regression Model Training Suite**: Training and evaluation of multiple regression algorithms (KNN, Gradient Boosting, Random Forest, XGBoost, Linear Regression) on real‑estate pricing data with automated persistence and performance reporting (R², MAPE).
-3. **Two‑Stage Generative Benchmarking Pipeline**: Combines genetic algorithms to identify poorly‑predicted instances with variational autoencoders that learn the distribution of failure cases, producing synthetic test examples that target model weaknesses.
-4. **Fairness‑Aware Scenario Generation**: Creates counterfactual synthetic examples in under‑performing feature subspaces to expose and mitigate bias across demographic and geographic segments.
-5. **Synthetic Data Generation for Edge Cases**: Generates high‑density synthetic samples in regions of the feature space where models exhibit high error, facilitating robust testing and continuous improvement.
-
+1. **Data Preprocessing & Feature Engineering**: Automated cleaning, encoding, scaling, and date decomposition of raw apartment and time‑series datasets. It removes irrelevant columns, handles missing values, and orders observations chronologically to produce a tidy DataFrame ready for modeling.
+2. **Regression Model Training Suite**: A plug‑in training pipeline that fits multiple regression algorithms (KNN, Gradient Boosting, Random Forest, XGBoost, Linear Regression) on real‑estate pricing data, evaluates them with R² and MAPE, and persists the best models for later inference.
+3. **Two‑Stage Generative Benchmarking Pipeline**: Combines a genetic algorithm to locate poorly‑predicted instances with a variational auto‑encoder that learns the distribution of those failure cases, producing synthetic test examples that specifically target model weaknesses.
+4. **Fairness‑Aware Scenario Generation**: Creates counterfactual synthetic examples in under‑performing feature subspaces (e.g., demographic or geographic groups) to expose and mitigate bias in predictive models.
+5. **Synthetic Edge‑Case Data Generation**: Generates high‑density synthetic samples in regions of the feature space where models exhibit high error, enabling robust testing and continuous improvement of model robustness.
 ---
 
 ## Installation
 
 Install Benchmarking_test using one of the following methods:
 
-**Build from source:**
+**Build from source**:
 
 1. Clone the Benchmarking_test repository:
    ```sh
@@ -56,14 +52,12 @@ Install Benchmarking_test using one of the following methods:
    ```sh
    pip install -r requirements.txt
    ```
-
 ---
 
 ## Contributing
 
 - **[Report Issues](https://github.com/fl1pcoin/Benchmarking_test/issues)**: Submit bugs found or log feature requests for the project.
 - **[Submit Pull Requests](https://github.com/fl1pcoin/Benchmarking_test/tree/experiments/.github/CONTRIBUTING.md)**: To learn more about making a contribution to Benchmarking_test.
-
 ---
 
 ## Citation
